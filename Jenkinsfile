@@ -12,17 +12,17 @@ pipeline {
 
         stage('Build') { 
             steps { 
-                 app = docker.build("web_application")
+                 sh 'docker build -t node_app .'
             }
         }
         stage('Test'){
             steps {
-                 echo 'Test'
+                 sh 'echo Test'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploy'
+               sh 'echo Deploy'
             }
         }
     }
