@@ -12,7 +12,8 @@ pipeline {
 
         stage('Build') { 
             steps { 
-                 sh 'docker build -t node_app .'
+                 // sh 'docker build -t node_app .'
+                 sh 'echo Build'
             }
         }
         stage('Test'){
